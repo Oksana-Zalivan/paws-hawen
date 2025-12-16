@@ -1,15 +1,17 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
 }
 
-p:last-child {
-  margin-bottom: 0;
+h1,
+h2,
+p {
+  margin: 0;
 }
 
 ul {
@@ -24,6 +26,9 @@ a {
 }
 
 button {
+  padding: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -31,4 +36,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
+

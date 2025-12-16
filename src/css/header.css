@@ -1,44 +1,86 @@
-.header {
-  padding: 20px 0;
-}
-.nav {
+.header-container {
   display: flex;
   justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  min-width: 320px;
+  width: 100%;
 }
-.nav-list {
+
+.header-logo-icon {
+  fill: #332C22;
+}
+
+.burger-button-header {
+  background: transparent;
+  border: none;
+  padding: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  justify-content: center;
+  fill: #02060A;
 }
-.nav-link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+
+.nav-list-desktop,
+.anchor-link-pets {
+  display: none;
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+@media only screen and (min-width: 768px) {
+  .header-container {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
-}
-.nav-link.active::after {
-  background: #747bff;
+
+@media only screen and (min-width: 1440px) {
+  .header-container {
+    max-width: 1440px;
+  }
+
+  .header-content-desktop {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .burger-button-header {
+    display: none;
+  }
+
+  .nav-list-desktop {
+    display: flex;
+    gap: 32px;
+    margin-left: 24px;
+  }
+
+  .nav-list-desktop a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .nav-list-desktop a:hover,
+  .nav-list-desktop a:focus {
+    border-bottom-color: #443B2E;
+  }
+
+  .anchor-link-pets {
+    display: flex;
+    margin-left: auto;
+    border: 1px solid #88765c;
+    border-radius: 8px;
+    padding: 8px 20px;
+    background-color: #88765c;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .anchor-link-pets:hover,
+  .anchor-link-pets:focus {
+    border: 1px solid #88765c;
+    background: #eee9e3;
+    color: #02060a;
+  }
+
 }
