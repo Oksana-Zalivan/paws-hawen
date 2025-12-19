@@ -1,14 +1,28 @@
-import './js/header';
-import './js/hero';
-import './js/pets-list';
-import './js/about-us';
-import './js/faq';
-import './js/stories';
-import './js/modal';
-import './js/order-modal';
-import './js/mobile-menu';
-import './js/footer';
+import { initAccordion } from './js/faq.js';
+initAccordion();
+import { openModal, closeModal } from './js/order-modal.js';
+import { initMobileMenu } from './js/mobile-menu.js';
+import { initSwiper } from './js/about-us.js';
+import { addCategories, getPets, renderPets } from './js/pets-list.js';
+import { initSuccessStories } from './js/stories.js';
+initSuccessStories();
 
+document.addEventListener('DOMContentLoaded', () => {
+    openModal();
+    closeModal();
+    initMobileMenu();
+    initSwiper();
 
+    addCategories();
+    getPets('all', 1);
 
+    const API_URL = 'https://paw-hut.b.goit.study/api/animals';
+    fetch(API_URL)
+        .then(res => res.json())
+        .then(data => renderPets(data.pets))
+        .catch(err => console.error(err));
+});
 
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}

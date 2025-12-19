@@ -11,8 +11,6 @@
   fill: #332C22;
 }
 
-
-
 .burger-button-header {
   background: transparent;
   border: none;
@@ -31,15 +29,15 @@
 @media only screen and (min-width: 768px) {
   .header-container {
     width: 100%;
-    padding: 0px 32px;
+    padding: 0px 12px 0px 32px;
     margin: 0 auto;
   }
 }
 
+
 @media only screen and (min-width: 1440px) {
   .header-container {
     max-width: 1440px;
-    padding: 0px 64px;
   }
 
   .header-content-desktop {

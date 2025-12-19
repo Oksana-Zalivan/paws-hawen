@@ -1,0 +1,61 @@
+<div class="modal-backdrop is-hidden" data-animal-modal-backdrop>
+    <div class="animal-modal-backdrop" data-animal-modal-backdrop-inner>
+        <div class="animal-modal-container">
+            <div class="animal-modal-content">
+                <div class="modal" role="dialog" aria-modal="true" aria-labelledby="animalModalTitle">
+                    <button class="modal-close" type="button" aria-label="Закрити" data-animal-modal-close>
+                        <svg class="btn-close" width="24" height="24">
+                            <use href="/img/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+
+                    <div class="modal-content">
+
+                        <div class="modal-left">
+
+                            <img class="modal-img" data-animal-img alt="Фото тваринки"
+                                src="/img/about-us/about-us-slide01-mobile.webp">
+
+                        </div>
+
+                        <div class="modal-right">
+                            <p id="animalModalTitle" class="modal-title" data-animal-species></p>
+                            <h3 class="modal-row name">
+                                <span class="modal-label"> </span>
+                                <span data-animal-name></span>
+                            </h3>
+                            <p class="modal-row info">
+                                <span data-animal-age> </span>
+                                <span data-animal-sex> </span>
+                            </p>
+
+                            <ul class="modal-block">
+                                <li>
+                                    <h4 class="modal-subtitle">Опис:</h4>
+                                    <p class="modal-text" data-animal-description></p>
+                                </li>
+
+                                <li>
+                                    <h3 class="modal-subtitle">Здоров'я:</h3>
+                                    <p class="modal-text" data-animal-health></p>
+                                </li>
+
+                                <li>
+                                    <h4 class="modal-subtitle">Поведінка:</h4>
+                                    <p class="modal-text" data-animal-behavior></p>
+                                </li>
+                            </ul>
+
+                            <button class="btn btn-primary" type="button" data-take-home>
+                                Взяти додому
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
